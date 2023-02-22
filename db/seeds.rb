@@ -17,3 +17,9 @@ Restaurant.destroy_all
     category: %w(chinese italian japanese french belgian).sample,
   )
 end
+5.times do
+  review = Review.create(
+    content: Faker::TvShows::BojackHorseman.quote,
+    rating: (0..5).to_a.sample
+    )
+end
